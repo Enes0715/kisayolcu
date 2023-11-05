@@ -23,7 +23,7 @@ def kisayol(key):
         with pyautogui.hold('ctrlleft'):
             pyautogui.press('t') 
     if i == 0:
-        # Stop listener
+        
         return False
 
 
@@ -34,20 +34,18 @@ def kisayol(key):
 
 layout = [[sg.Text("Kısayol programını Aç/Kapa")], [sg.Button("Aç")], [sg.Button("Kapa")]]
 
-# Create the window
 
 window = sg.Window("Kısayolcu", layout, margins=(75, 50))
-# Create an event loop
+
 while True:
     
     event, values = window.read()
-    # End program if user closes window or
-    # presses the OK button
+    
     if event == "Aç" or event == sg.WIN_CLOSED:
         i = 1
             
 
-        # ...or, in a non-blocking fashion:
+        
         listener = keyboard.Listener(on_release=kisayol)
         listener.start()
     if event == "Kapa" or event == sg.WIN_CLOSED:
