@@ -1,0 +1,2 @@
+# kisayolcu
+Bir kısayol uygulaması
